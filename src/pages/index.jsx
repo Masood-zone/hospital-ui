@@ -1,7 +1,41 @@
-import React from "react";
+import { createRoutesFromElements } from "react-router-dom";
+import { createBrowserRouter } from "react-router-dom";
+import Layout from "../components/layout";
+import { Route } from "react-router-dom";
 
-function MainApp() {
-  return <div></div>;
-}
-
-export default MainApp;
+export const rootRoutes = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="/" element={<Layout />}>
+        <Route
+          index
+          lazy={async () => {
+            const { default: Home } = await import("./home");
+            return { Component: Home };
+          }}
+        />
+        <Route
+          path="about"
+          lazy={async () => {
+            const { default: AboutUs } = await import("./about");
+            return { Component: AboutUs };
+          }}
+        />
+        <Route
+          path="blogs"
+          lazy={async () => {
+            const { default: Blogs } = await import("./blogs");
+            return { Component: Blogs };
+          }}
+        />
+      </Route>
+      <Route
+        path="*"
+        lazy={async () => {
+          const { default: NotFound } = await import("./notfound/404");
+          return { Component: NotFound };
+        }}
+      />
+    </>
+  )
+);
