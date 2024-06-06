@@ -7,7 +7,7 @@ function Footer() {
       <footer className="footer p-10 bg-[#263238] text-base-300">
         {/* Main Logo */}
         <aside>
-          <div className="flex items-center">
+          <div className="flex items-center max-sm:flex-col max-sm:items-start max-sm:gap-2">
             <a href="/" className="flex">
               <img
                 src={mainLogo}
@@ -15,9 +15,9 @@ function Footer() {
                 className="w-auto h-auto btn btn-ghost "
               />
             </a>
-            <p className="uppercase text-text-200 font-bold text-lg">
+            <p className="uppercase text-text-200 font-bold text-lg max-sm:text-base">
               THE KIDNEY Specialist Centre
-              <p className="text-sm capitalize italic font-light text-text-200">
+              <p className="text-sm capitalize italic font-light text-text-200 max-sm:text-xs">
                 <span className="text-primary-500 ">Healthy Kidneys</span> Our
                 Priority For Everyone Everywhere.
               </p>
