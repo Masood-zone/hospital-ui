@@ -156,27 +156,29 @@ body {
 .loader {
   width: 50px;
   aspect-ratio: 1;
-  display: grid;
+  box-shadow: 0 0 0 3px #3e8e41 inset;
+  border-radius: 50%;
+  position: relative;
+  animation: l11 7s infinite;
 }
-.loader::before,
-.loader::after {
+.loader:before,
+.loader:after {
   content: "";
-  grid-area: 1/1;
-  --c: no-repeat radial-gradient(farthest-side, #25b09b 92%, #0000);
-  background: var(--c) 50% 0, var(--c) 50% 100%, var(--c) 100% 50%,
-    var(--c) 0 50%;
-  background-size: 12px 12px;
-  animation: l12 1s infinite;
+  position: absolute;
+  top: calc(100% + 3px);
+  left: calc(50% - 12.5px);
+  box-shadow: inherit;
+  width: 25px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  transform-origin: 50% -28px;
+  animation: l11 1.5s infinite;
 }
-.loader::before {
-  margin: 4px;
-  filter: hue-rotate(45deg);
-  background-size: 8px 8px;
-  animation-timing-function: linear;
+.loader:after {
+  animation-delay: -0.75s;
 }
-
-@keyframes l12 {
+@keyframes l11 {
   100% {
-    transform: rotate(0.5turn);
+    transform: rotate(360deg);
   }
 }
