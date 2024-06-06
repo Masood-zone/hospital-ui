@@ -14,7 +14,14 @@ function Navbar() {
           alt="main-logo"
           className="w-auto h-auto btn btn-ghost hidden sm:block"
         />
-        <p className="cursor-pointer uppercase text-lg max-md:text-base font-bold max-sm:hidden">
+        <a href="/" className="flex">
+          <img
+            src={mainLogo}
+            alt="main-logo"
+            className="w-auto h-auto btn btn-ghost sm:hidden"
+          />
+        </a>
+        <p className="cursor-pointer uppercase text-lg max-md:text-sm font-bold max-sm:text-sm max-[399px]:text-xs">
           THE KIDNEY Specialist Centre
         </p>
       </div>
@@ -29,7 +36,7 @@ function Navbar() {
         </ul>
       </div>
       {/* Buttons */}
-      <div className="navbar-end">
+      <div className="navbar-end max-sm:hidden">
         <a className="btn bg-primary-600 text-white">Contact Us</a>
       </div>
     </nav>

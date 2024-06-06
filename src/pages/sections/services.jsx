@@ -94,7 +94,7 @@ function Services() {
           {community_data.slice(0, 6).map((community) => (
             <div
               key={community.id}
-              className="card w-96 h-96 bg-base-100 shadow"
+              className="card w-96 max-sm:w-auto max-sm:mx-2 h-96 bg-base-100 shadow"
             >
               <figure className="w-full  mb-2">
                 <img
