@@ -13,12 +13,15 @@ function MobileNavbar() {
         tabIndex={0}
         className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
       >
-        <a href="/">
+        <a href="/" className="flex">
           <img
             src={mainLogo}
             alt="main-logo"
-            className="w-52 h-auto btn btn-ghost sm:hidden"
+            className="w-auto h-auto btn btn-ghost sm:hidden"
           />
+          <p className="cursor-pointer capitalize text-sm font-medium md:hidden">
+            THE KIDNEY Specialist Centre
+          </p>
         </a>
         {NAV_LINKS.map((link) => (
           <li key={link.id} className="my-1">

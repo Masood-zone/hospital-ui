@@ -5,15 +5,18 @@ import MobileNavbar from "./mobile";
 
 function Navbar() {
   return (
-    <nav className="navbar bg-base-100">
+    <nav className="navbar bg-base-100 z-10 fixed w-full top-0 left-0">
       {/* Logo and mobile menu */}
-      <div className="navbar-start">
+      <div className="navbar-start max-md:w-full">
         <MobileNavbar />
         <img
           src={mainLogo}
           alt="main-logo"
-          className="w-52 h-auto btn btn-ghost hidden sm:block"
+          className="w-auto h-auto btn btn-ghost hidden sm:block"
         />
+        <p className="cursor-pointer uppercase text-lg max-md:text-base font-bold max-sm:hidden">
+          THE KIDNEY Specialist Centre
+        </p>
       </div>
       {/* Main Links */}
       <div className="navbar-center hidden lg:flex">
@@ -27,8 +30,7 @@ function Navbar() {
       </div>
       {/* Buttons */}
       <div className="navbar-end">
-        <a className="btn btn-ghost text-primary-600">Log in</a>
-        <a className="btn bg-primary-600 text-white">Sign up</a>
+        <a className="btn bg-primary-600 text-white">Contact Us</a>
       </div>
     </nav>
   );

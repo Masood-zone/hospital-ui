@@ -14,11 +14,14 @@ export const useDotButton = (emblaApi) => {
   const onInit = useCallback(() => {
     if (!emblaApi) return;
     setScrollSnaps(emblaApi.scrollSnapList());
-  }, []);
-  const onSelect = useCallback((emblaApi) => {
-    if (!emblaApi) return;
-    setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, []);
+  }, [emblaApi]);
+  const onSelect = useCallback(
+    (emblaApi) => {
+      if (!emblaApi) return;
+      setSelectedIndex(emblaApi.selectedScrollSnap());
+    },
+    [emblaApi]
+  );
 
   useEffect(() => {
     if (!emblaApi) return;
@@ -29,14 +32,4 @@ export const useDotButton = (emblaApi) => {
   }, [emblaApi, onInit, onSelect]);
 
   return { selectedIndex, scrollSnaps, onDotButtonClick };
-};
-
-export const DotButton = (props) => {
-  const { children, ...restProps } = props;
-
-  return (
-    <button type="button" {...restProps}>
-      {children}
-    </button>
-  );
 };

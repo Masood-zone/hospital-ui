@@ -9,16 +9,16 @@ export const NAV_LINKS = [
     name: "Services",
     path: "#services",
   },
-  {
-    id: 3,
-    name: "Features",
-    path: "#features",
-  },
-  {
-    id: 4,
-    name: "Product",
-    path: "#products",
-  },
+  // {
+  //   id: 3,
+  //   name: "Features",
+  //   path: "#features",
+  // },
+  // {
+  //   id: 4,
+  //   name: "Products",
+  //   path: "#products",
+  // },
   {
     id: 5,
     name: "Testimonial",

@@ -33,7 +33,7 @@
     --primary-200: #b8e0b9;
     --primary-300: #95d097;
     --primary-400: #71c174;
-    --primary-500: #4eb151;
+    --primary-500: #1db422;
     --primary-600: #3e8e41;
     --primary-700: #2f6a31;
     --primary-800: #1f4720;
@@ -129,4 +129,25 @@
 
 body {
   font-family: "Inter", sans-serif;
+}
+
+.tip-background-1 {
+  background: #3e8e41 url("./assets/image/tip-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tip-background-2 {
+  background: #3e8e41 url("./assets/image/tip-2.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.tip-background-3 {
+  background: #3e8e41 url("./assets/image/tip-3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
