@@ -13,6 +13,7 @@ import {
 import ServiceCard from "../../components/cards/serviceCard";
 import { useInView } from "react-intersection-observer";
 import { memo } from "react";
+import InViewWrapper from "../../utils/inViewWrapper";
 
 const Services = memo(() => {
   const community_data = [
@@ -94,17 +95,13 @@ const Services = memo(() => {
           </p>
         </div>
         <div className="grid mx-auto grid-cols-3 max-md:grid-cols-1  max-xl:grid-cols-2 gap-8">
-          {community_data.map((community) => {
-            const { ref, inView } = useInView({
-              triggerOnce: true,
-              threshold: 0.1,
-            });
-            return (
-              <div key={community.id} ref={ref}>
+          {community_data.map((community) => (
+            <InViewWrapper key={community.id}>
+              {(inView) => (
                 <ServiceCard community={community} animate={inView} />
-              </div>
-            );
-          })}
+              )}
+            </InViewWrapper>
+          ))}
         </div>
       </div>
     </section>

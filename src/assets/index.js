@@ -9,10 +9,8 @@ import kidneyTransplant from "./image/kidney-transplant.jpg";
 import therapy from "./image/therapy.jpg";
 import rehab from "./image/rehab.jpg";
 import members from "./svg/members.svg";
-import tesla from "./image/tesla.png";
 import associations from "./svg/assocations.svg";
 import clubs2 from "./svg/clubs2.svg";
-import feature1 from "./image/stat-pic.png";
 import people from "./svg/people.svg";
 import events from "./svg/events.svg";
 import payments from "./svg/payments.svg";
@@ -31,10 +29,8 @@ export {
   rehab,
   members,
   associations,
-  tesla,
   people,
   events,
-  feature1,
   clubs2,
   feature2,
   payments,
