@@ -16,7 +16,7 @@ function ServiceCard({ community, animate }) {
         duration: 1000,
         easing: "easeOutElastic(1,.6)",
         translateY: 20,
-        delay: anime.stagger(200, { direction: "normal" }),
+        delay: anime.stagger(100, { direction: "normal" }),
       });
     }
   }, [animate]);
@@ -26,7 +26,7 @@ function ServiceCard({ community, animate }) {
       className="card w-96 max-sm:w-auto max-sm:mx-2 h-96 bg-base-100 shadow"
       style={{ visibility: animate ? "visible" : "hidden" }}
     >
-      <figure className="w-full  mb-2">
+      <figure className="w-full h-44 mb-2">
         <LazyLoadImage
           src={community.image}
           alt={community.title}
