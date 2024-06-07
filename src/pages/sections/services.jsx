@@ -10,6 +10,8 @@ import {
   screening,
   therapy,
 } from "../../assets";
+import ServiceCard from "../../components/cards/serviceCard";
+import { useInView } from "react-intersection-observer";
 
 function Services() {
   const community_data = [
@@ -91,29 +93,17 @@ function Services() {
           </p>
         </div>
         <div className="grid mx-auto grid-cols-3 max-md:grid-cols-1  max-xl:grid-cols-2 gap-8">
-          {community_data.slice(0, 6).map((community) => (
-            <div
-              key={community.id}
-              className="card w-96 max-sm:w-auto max-sm:mx-2 h-96 bg-base-100 shadow"
-            >
-              <figure className="w-full  mb-2">
-                <img
-                  className="w-full h-full object-cover object-center"
-                  src={community.image}
-                  alt={community.title}
-                />
-              </figure>
-              <div className="card-body p-5">
-                <h2 className="card-title">{community.title}</h2>
-                <p>{community.description}</p>
-                <div className="card-actions justify-end">
-                  <button className="btn bg-primary-500 text-white">
-                    Reach out
-                  </button>
-                </div>
+          {community_data.map((community) => {
+            const { ref, inView } = useInView({
+              triggerOnce: true,
+              threshold: 0.1,
+            });
+            return (
+              <div key={community.id} ref={ref}>
+                <ServiceCard community={community} animate={inView} />
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>
