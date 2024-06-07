@@ -26,7 +26,8 @@ function Footer() {
             </div>
             <div>
               <p className="text-center max-sm:text-sm max-md:text-left">
-                &copy; 2021 The Kidney Specialist Centre. All rights reserved.
+                Asokwa, Behind Pentecost Church. <br /> The Kidney Specialist
+                Centre. All rights reserved.
               </p>
             </div>
           </div>

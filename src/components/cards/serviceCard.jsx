@@ -1,8 +1,8 @@
 import anime from "animejs";
 import React from "react";
 import { useEffect } from "react";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import "react-lazy-load-image-component/src/effects/blur.css";
+// import { LazyLoadImage } from "react-lazy-load-image-component";
+// import "react-lazy-load-image-component/src/effects/blur.css";
 import { useRef } from "react";
 
 function ServiceCard({ community, animate }) {
@@ -27,14 +27,19 @@ function ServiceCard({ community, animate }) {
       style={{ visibility: animate ? "visible" : "hidden" }}
     >
       <figure className="w-full  mb-2">
-        <LazyLoadImage
+        <img
+          src={community.image}
+          alt={community.title}
+          className="w-full h-full object-cover object-center"
+        />
+        {/* <LazyLoadImage
           src={community.image}
           alt={community.title}
           className="w-full h-full object-cover object-center"
           effect="blur"
           width="100%"
           height="100%"
-        />
+        /> */}
       </figure>
       <div className="card-body p-5">
         <h2 className="card-title">{community.title}</h2>
