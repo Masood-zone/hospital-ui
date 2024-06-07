@@ -29,10 +29,10 @@ function Faq() {
   ];
   return (
     <div className="my-10">
-      <h1 className="text-2xl font-bold py-5 text-center">
+      <h1 className="text-2xl max-sm:text-xl max-[399px]:text-lg font-bold py-5 text-center">
         FAQ - (Frequently Asked Questions)
       </h1>
-      <div className="">
+      <div className="max-sm:mx-5 max-[399px]:mx-3">
         {faq_data.map((faq) => (
           <div
             key={faq.id}
