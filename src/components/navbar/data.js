@@ -19,11 +19,11 @@ export const NAV_LINKS = [
   //   name: "Products",
   //   path: "#products",
   // },
-  {
-    id: 5,
-    name: "Testimonial",
-    path: "#testimonials",
-  },
+  // {
+  //   id: 5,
+  //   name: "Testimonial",
+  //   path: "#testimonials",
+  // },
   {
     id: 6,
     name: "FAQ",

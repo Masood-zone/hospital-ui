@@ -11,7 +11,6 @@ import {
   therapy,
 } from "../../assets";
 import ServiceCard from "../../components/cards/serviceCard";
-import { useInView } from "react-intersection-observer";
 import { memo } from "react";
 import InViewWrapper from "../../utils/inViewWrapper";
 
