@@ -17,7 +17,7 @@ function LazyLoadImage({ src, alt, ...props }) {
           {...props}
         />
       ) : (
-        <div className="w-full h-32 bg-gray-200 animate-pulse"></div>
+        <div className="w-full h-32 bg-gray-300 animate-pulse"></div>
       )}
     </div>
   );

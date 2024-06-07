@@ -12,8 +12,9 @@ import {
 } from "../../assets";
 import ServiceCard from "../../components/cards/serviceCard";
 import { useInView } from "react-intersection-observer";
+import { memo } from "react";
 
-function Services() {
+const Services = memo(() => {
   const community_data = [
     {
       id: 1,
@@ -108,6 +109,6 @@ function Services() {
       </div>
     </section>
   );
-}
+});
 
 export default Services;
