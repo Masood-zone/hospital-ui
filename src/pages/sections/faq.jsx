@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 
 function Faq() {
   const faq_data = [
@@ -27,8 +28,9 @@ function Faq() {
         "Kidney disease can be prevented by managing underlying conditions like diabetes and high blood pressure, maintaining a healthy lifestyle, and getting regular check-ups.",
     },
   ];
+
   return (
-    <div className="my-10">
+    <div className="my-10" id="faq">
       <h1 className="text-2xl max-sm:text-xl max-[399px]:text-lg font-bold py-5 text-center">
         FAQ - (Frequently Asked Questions)
       </h1>
