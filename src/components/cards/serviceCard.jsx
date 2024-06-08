@@ -14,7 +14,7 @@ function ServiceCard({ community, animate }) {
         translateY: [50, 0],
         opacity: [0.6, 1],
         scale: [0.9, 1],
-        duration: 1200,
+        duration: 900,
         easing: "easeOutQuad",
         delay: anime.stagger(100, { start: 200 }), // Delay each card slightly
       });
