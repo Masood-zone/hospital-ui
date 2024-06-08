@@ -13,8 +13,8 @@ function ServiceCard({ community, animate }) {
         targets: cardRef.current,
         scale: [0.7, 1],
         opacity: [0.8, 1],
-        duration: 1000,
-        easing: "easeOutElastic(1,.6)",
+        duration: 3000,
+        easing: "easeOutElastic(.6,.6)",
         translateY: 20,
         delay: anime.stagger(100, { direction: "normal" }),
       });
