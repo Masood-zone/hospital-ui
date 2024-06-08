@@ -11,12 +11,12 @@ function ServiceCard({ community, animate }) {
     if (animate) {
       anime({
         targets: cardRef.current,
-        scale: [0.7, 1],
-        opacity: [0.8, 1],
-        duration: 3000,
-        easing: "easeOutElastic(.6,.6)",
-        translateY: 20,
-        delay: anime.stagger(100, { direction: "normal" }),
+        translateY: [50, 0],
+        opacity: [0.6, 1],
+        scale: [0.9, 1],
+        duration: 1200,
+        easing: "easeOutQuad",
+        delay: anime.stagger(100, { start: 200 }), // Delay each card slightly
       });
     }
   }, [animate]);
@@ -27,14 +27,22 @@ function ServiceCard({ community, animate }) {
       style={{ visibility: animate ? "visible" : "hidden" }}
     >
       <figure className="w-full h-44 mb-2">
-        <LazyLoadImage
+        <img
+          src={community.image}
+          alt={community.title}
+          className="w-full h-full object-cover object-center skeleton rounded-none"
+          // effect="blur"
+          // width="100%"
+          // height="100%"
+        />
+        {/* <LazyLoadImage
           src={community.image}
           alt={community.title}
           className="w-full h-full object-cover object-center"
           effect="blur"
           width="100%"
           height="100%"
-        />
+        /> */}
       </figure>
       <div className="card-body p-5">
         <h2 className="card-title">{community.title}</h2>
