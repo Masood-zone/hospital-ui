@@ -2,8 +2,20 @@ import React from "react";
 import { mainLogo } from "../../assets";
 import { NAV_LINKS } from "./data";
 import MobileNavbar from "./mobile";
+import { Link } from "react-router-dom";
 
 function Navbar() {
+  const scrollToSection = (e, path) => {
+    e.preventDefault();
+    if (path.startsWith("#")) {
+      const element = document.querySelector(path);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      window.location.href = "*";
+    }
+  };
   return (
     <nav className="navbar bg-base-100 z-10 fixed w-full top-0 left-0">
       {/* Logo and mobile menu */}
@@ -30,7 +42,12 @@ function Navbar() {
         <ul className="menu menu-horizontal px-1">
           {NAV_LINKS.map((link) => (
             <li key={link.id}>
-              <a href={link.path}>{link.name}</a>
+              <Link
+                onClick={(e) => scrollToSection(e, link.path)}
+                to={link.path}
+              >
+                {link.name}
+              </Link>
             </li>
           ))}
         </ul>
